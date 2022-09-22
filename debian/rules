@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_installdocs:
+	dh_installdocs -a -Nnettle-bin
+	dh_installdocs -pnettle-bin --link-doc=libnettle8
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-fat
