@@ -1,106 +1,137 @@
 libnettle.so.8 libnettle8 #MINVER#
 * Build-Depends-Package: nettle-dev
  NETTLE_8@NETTLE_8 0
- NETTLE_INTERNAL_8_4@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_aeads@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_aes_decrypt@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_aes_decrypt_aesni@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_aes_decrypt_arm@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_aes_decrypt_armv6@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_aes_decrypt_c@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_aes_decrypt_ppc64@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_aes_decrypt_x86_64@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_aes_encrypt@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_aes_encrypt_aesni@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_aes_encrypt_arm@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_aes_encrypt_armv6@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_aes_encrypt_c@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_aes_encrypt_ppc64@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_aes_encrypt_table@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_aes_encrypt_x86_64@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_aes_invert@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_aes_set_key@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_armors@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_blowfish_encround@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_blowfish_initial_ctx@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_camellia_absorb@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_camellia_crypt@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_camellia_invert_key@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_camellia_table@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_chacha_2core32@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_chacha_2core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_chacha_3core32@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_chacha_3core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_chacha_4core32@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_chacha_4core@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_chacha_core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_chacha_core_altivec@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_chacha_core_c@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf ppc64 ppc64el)_nettle_chacha_crypt32_1core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_chacha_crypt32_3core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_chacha_crypt32_4core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf ppc64 ppc64el)_nettle_chacha_crypt_1core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_chacha_crypt_3core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_chacha_crypt_4core@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_ciphers@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_cpuid@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_ctr_crypt16@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_gcm_hash8@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_gcm_hash@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_gcm_hash_c@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_gcm_hash_ppc64@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_gcm_init_key@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_gcm_init_key_c@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=ppc64 ppc64el)_nettle_gcm_init_key_ppc64@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_gost28147_encrypt_block@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_gost28147_param_CryptoPro_3411@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_gost28147_param_test_3411@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_hashes@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_macs@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_memxor_sse2@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_memxor_x86_64@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_poly1305_block@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_poly1305_digest@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_poly1305_set_key@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_ripemd160_compress@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64 armel armhf)_nettle_salsa20_2core@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_salsa20_core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_sha1_compress_sha_ni@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_sha1_compress_x86_64@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_salsa20_crypt@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_salsa20_crypt_1core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_salsa20_crypt_2core@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_sha1_compress_armv6@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_sha1_compress_c@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_sha256_compress@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_sha256_compress_sha_ni@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=any-amd64)_nettle_sha256_compress_x86_64@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_sha256_compress_armv6@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_sha256_compress_c@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_sha3_pad@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_sha3_permute_c@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_sha3_permute_neon@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_sha3_update@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_sha512_compress@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_sha512_compress_c@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_sha512_compress_neon@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_l2@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_l2_final@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_l2_init@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_l3@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_l3_init@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_nh@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_umac_nh_c@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_nh_n@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_umac_nh_n_c@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_umac_nh_n_neon@NETTLE_INTERNAL_8_4 3.7.3~
- (arch=armel armhf)_nettle_umac_nh_neon@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_poly128@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_poly64@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_umac_set_key@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_write_be32@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_write_le32@NETTLE_INTERNAL_8_4 3.7.3~
- _nettle_write_le64@NETTLE_INTERNAL_8_4 3.7.3~
+ NETTLE_INTERNAL_8_10@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aeads@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes128_decrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes128_decrypt_arm64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes128_decrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes128_encrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes128_encrypt_arm64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes128_encrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes192_decrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes192_decrypt_arm64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes192_decrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes192_encrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes192_encrypt_arm64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes192_encrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes256_decrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes256_decrypt_arm64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes256_decrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes256_encrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes256_encrypt_arm64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes256_encrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_decrypt@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_decrypt_arm@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_decrypt_armv6@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_decrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_decrypt_ppc64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_decrypt_table@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_encrypt@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_encrypt_arm@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_encrypt_armv6@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_encrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_encrypt_ppc64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_encrypt_table@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_invert@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_aes_set_key@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_armors@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_blowfish_encround@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_blowfish_initial_ctx@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_camellia_absorb@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_camellia_crypt@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_camellia_invert_key@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_camellia_table@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_cbc_aes128_encrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_cbc_aes128_encrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_cbc_aes192_encrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_cbc_aes192_encrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_cbc_aes256_encrypt_aesni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_cbc_aes256_encrypt_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_2core32@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_2core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_3core32@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_3core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_4core32@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_4core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_core_altivec@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_core_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_crypt32_1core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_crypt32_3core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_crypt32_4core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_crypt_1core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_crypt_3core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_chacha_crypt_4core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ciphers@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_cpuid@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ctr_crypt16@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ghash_set_key@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ghash_set_key_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ghash_set_key_pclmul@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ghash_update@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ghash_update_pclmul@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ghash_update_table@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_gost28147_encrypt_block@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_gost28147_param_CryptoPro_3411@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_gost28147_param_test_3411@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_hashes@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_macs@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_memxor_sse2@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_memxor_x86_64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_poly1305_block@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_poly1305_blocks@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_poly1305_digest@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_poly1305_set_key@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_poly1305_update@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_ripemd160_compress@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_salsa20_2core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_salsa20_core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha1_compress_sha_ni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha1_compress_x86_64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_salsa20_crypt@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_salsa20_crypt_1core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_salsa20_crypt_2core@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha1_compress_armv6@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha1_compress_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha1_compress_sha_ni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha1_compress_x86_64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha256_compress@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha256_compress_sha_ni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha256_compress_x86_64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha256_compress_armv6@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha256_compress_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha256_compress_n@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha256_compress_n_sha_ni@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha256_compress_n_x86_64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha3_pad@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha3_permute_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha3_permute_neon@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha3_shake@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha3_shake_output@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha3_update@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha512_compress@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha512_compress_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_sha512_compress_neon@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_siv_ghash_set_key@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_siv_ghash_update@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_l2@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_l2_final@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_l2_init@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_l3@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_l3_init@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_nh@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_nh_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_nh_n@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_nh_n_c@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_nh_n_neon@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_nh_neon@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_poly128@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_poly64@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_umac_set_key@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_write_be32@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_write_le32@NETTLE_INTERNAL_8_10 3.10.1~
+ (optional)_nettle_write_le64@NETTLE_INTERNAL_8_10 3.10.1~
  nettle_MD5Final@NETTLE_8 0
  nettle_MD5Init@NETTLE_8 0
  nettle_MD5Update@NETTLE_8 0
@@ -108,18 +139,24 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_aes128_decrypt@NETTLE_8 0
  nettle_aes128_encrypt@NETTLE_8 0
  nettle_aes128_invert_key@NETTLE_8 0
+ nettle_aes128_keyunwrap@NETTLE_8 3.8~
+ nettle_aes128_keywrap@NETTLE_8 3.8~
  nettle_aes128_set_decrypt_key@NETTLE_8 0
  nettle_aes128_set_encrypt_key@NETTLE_8 0
  nettle_aes192@NETTLE_8 0
  nettle_aes192_decrypt@NETTLE_8 0
  nettle_aes192_encrypt@NETTLE_8 0
  nettle_aes192_invert_key@NETTLE_8 0
+ nettle_aes192_keyunwrap@NETTLE_8 3.8~
+ nettle_aes192_keywrap@NETTLE_8 3.8~
  nettle_aes192_set_decrypt_key@NETTLE_8 0
  nettle_aes192_set_encrypt_key@NETTLE_8 0
  nettle_aes256@NETTLE_8 0
  nettle_aes256_decrypt@NETTLE_8 0
  nettle_aes256_encrypt@NETTLE_8 0
  nettle_aes256_invert_key@NETTLE_8 0
+ nettle_aes256_keyunwrap@NETTLE_8 3.8~
+ nettle_aes256_keywrap@NETTLE_8 3.8~
  nettle_aes256_set_decrypt_key@NETTLE_8 0
  nettle_aes256_set_encrypt_key@NETTLE_8 0
  nettle_aes_decrypt@NETTLE_8 0
@@ -143,6 +180,12 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_arctwo_set_key@NETTLE_8 0
  nettle_arctwo_set_key_ekb@NETTLE_8 0
  nettle_arctwo_set_key_gutmann@NETTLE_8 0
+ nettle_balloon@NETTLE_8 3.9~
+ nettle_balloon_itch@NETTLE_8 3.9~
+ nettle_balloon_sha1@NETTLE_8 3.9~
+ nettle_balloon_sha256@NETTLE_8 3.9~
+ nettle_balloon_sha384@NETTLE_8 3.9~
+ nettle_balloon_sha512@NETTLE_8 3.9~
  nettle_base16@NETTLE_8 0
  nettle_base16_decode_final@NETTLE_8 0
  nettle_base16_decode_init@NETTLE_8 0
@@ -197,6 +240,9 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_cast128_encrypt@NETTLE_8 0
  nettle_cast128_set_key@NETTLE_8 0
  nettle_cast5_set_key@NETTLE_8 0
+ nettle_cbc_aes128_encrypt@NETTLE_8 3.8~
+ nettle_cbc_aes192_encrypt@NETTLE_8 3.8~
+ nettle_cbc_aes256_encrypt@NETTLE_8 3.8~
  nettle_cbc_decrypt@NETTLE_8 0
  nettle_cbc_encrypt@NETTLE_8 0
  nettle_ccm_aes128_decrypt@NETTLE_8 0
@@ -278,6 +324,8 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_des_encrypt@NETTLE_8 0
  nettle_des_fix_parity@NETTLE_8 0
  nettle_des_set_key@NETTLE_8 0
+ nettle_drbg_ctr_aes256_init@NETTLE_8 3.10~
+ nettle_drbg_ctr_aes256_random@NETTLE_8 3.10~
  nettle_eax_aes128@NETTLE_8 0
  nettle_eax_aes128_decrypt@NETTLE_8 0
  nettle_eax_aes128_digest@NETTLE_8 0
@@ -337,6 +385,13 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_gcm_encrypt@NETTLE_8 0
  nettle_gcm_set_iv@NETTLE_8 0
  nettle_gcm_set_key@NETTLE_8 0
+ nettle_gcm_sm4@NETTLE_8 3.9~
+ nettle_gcm_sm4_decrypt@NETTLE_8 3.9~
+ nettle_gcm_sm4_digest@NETTLE_8 3.9~
+ nettle_gcm_sm4_encrypt@NETTLE_8 3.9~
+ nettle_gcm_sm4_set_iv@NETTLE_8 3.9~
+ nettle_gcm_sm4_set_key@NETTLE_8 3.9~
+ nettle_gcm_sm4_update@NETTLE_8 3.9~
  nettle_gcm_update@NETTLE_8 0
  nettle_get_aeads@NETTLE_8 0
  nettle_get_armors@NETTLE_8 0
@@ -353,9 +408,11 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_hkdf_expand@NETTLE_8 0
  nettle_hkdf_extract@NETTLE_8 0
  nettle_hmac_digest@NETTLE_8 0
+ nettle_hmac_gosthash94@NETTLE_8 3.10.1~
  nettle_hmac_gosthash94_digest@NETTLE_8 0
  nettle_hmac_gosthash94_set_key@NETTLE_8 0
  nettle_hmac_gosthash94_update@NETTLE_8 0
+ nettle_hmac_gosthash94cp@NETTLE_8 3.10.1~
  nettle_hmac_gosthash94cp_digest@NETTLE_8 0
  nettle_hmac_gosthash94cp_set_key@NETTLE_8 0
  nettle_hmac_gosthash94cp_update@NETTLE_8 0
@@ -386,6 +443,10 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_hmac_sha512_digest@NETTLE_8 0
  nettle_hmac_sha512_set_key@NETTLE_8 0
  nettle_hmac_sha512_update@NETTLE_8 0
+ nettle_hmac_sm3@NETTLE_8 3.8~
+ nettle_hmac_sm3_digest@NETTLE_8 3.8~
+ nettle_hmac_sm3_set_key@NETTLE_8 3.8~
+ nettle_hmac_sm3_update@NETTLE_8 3.8~
  nettle_hmac_streebog256@NETTLE_8 3.7~
  nettle_hmac_streebog256_digest@NETTLE_8 3.7~
  nettle_hmac_streebog256_set_key@NETTLE_8 3.7~
@@ -415,6 +476,25 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_memeql_sec@NETTLE_8 0
  nettle_memxor3@NETTLE_8 0
  nettle_memxor@NETTLE_8 0
+ nettle_nist_keyunwrap16@NETTLE_8 3.8~
+ nettle_nist_keywrap16@NETTLE_8 3.8~
+ nettle_ocb_aes128_decrypt@NETTLE_8 3.9~
+ nettle_ocb_aes128_decrypt_message@NETTLE_8 3.9~
+ nettle_ocb_aes128_digest@NETTLE_8 3.9~
+ nettle_ocb_aes128_encrypt@NETTLE_8 3.9~
+ nettle_ocb_aes128_encrypt_message@NETTLE_8 3.9~
+ nettle_ocb_aes128_set_decrypt_key@NETTLE_8 3.9~
+ nettle_ocb_aes128_set_encrypt_key@NETTLE_8 3.9~
+ nettle_ocb_aes128_set_nonce@NETTLE_8 3.9~
+ nettle_ocb_aes128_update@NETTLE_8 3.9~
+ nettle_ocb_decrypt@NETTLE_8 3.9~
+ nettle_ocb_decrypt_message@NETTLE_8 3.9~
+ nettle_ocb_digest@NETTLE_8 3.9~
+ nettle_ocb_encrypt@NETTLE_8 3.9~
+ nettle_ocb_encrypt_message@NETTLE_8 3.9~
+ nettle_ocb_set_key@NETTLE_8 3.9~
+ nettle_ocb_set_nonce@NETTLE_8 3.9~
+ nettle_ocb_update@NETTLE_8 3.9~
  nettle_pbkdf2@NETTLE_8 0
  nettle_pbkdf2_hmac_gosthash94cp@NETTLE_8 0
  nettle_pbkdf2_hmac_sha1@NETTLE_8 0
@@ -454,12 +534,17 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_sha224_digest@NETTLE_8 0
  nettle_sha224_init@NETTLE_8 0
  nettle_sha256@NETTLE_8 0
+ nettle_sha256_compress@NETTLE_8 3.9~
  nettle_sha256_digest@NETTLE_8 0
  nettle_sha256_init@NETTLE_8 0
  nettle_sha256_update@NETTLE_8 0
  nettle_sha384@NETTLE_8 0
  nettle_sha384_digest@NETTLE_8 0
  nettle_sha384_init@NETTLE_8 0
+ nettle_sha3_128_init@NETTLE_8 3.10~
+ nettle_sha3_128_shake@NETTLE_8 3.10~
+ nettle_sha3_128_shake_output@NETTLE_8 3.10~
+ nettle_sha3_128_update@NETTLE_8 3.10~
  nettle_sha3_224@NETTLE_8 0
  nettle_sha3_224_digest@NETTLE_8 0
  nettle_sha3_224_init@NETTLE_8 0
@@ -468,6 +553,7 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_sha3_256_digest@NETTLE_8 0
  nettle_sha3_256_init@NETTLE_8 0
  nettle_sha3_256_shake@NETTLE_8 0
+ nettle_sha3_256_shake_output@NETTLE_8 3.10~
  nettle_sha3_256_update@NETTLE_8 0
  nettle_sha3_384@NETTLE_8 0
  nettle_sha3_384_digest@NETTLE_8 0
@@ -485,6 +571,7 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_sha512_256@NETTLE_8 0
  nettle_sha512_256_digest@NETTLE_8 0
  nettle_sha512_256_init@NETTLE_8 0
+ nettle_sha512_compress@NETTLE_8 3.9~
  nettle_sha512_digest@NETTLE_8 0
  nettle_sha512_init@NETTLE_8 0
  nettle_sha512_update@NETTLE_8 0
@@ -497,6 +584,20 @@ libnettle.so.8 libnettle8 #MINVER#
  nettle_siv_cmac_decrypt_message@NETTLE_8 0
  nettle_siv_cmac_encrypt_message@NETTLE_8 0
  nettle_siv_cmac_set_key@NETTLE_8 0
+ nettle_siv_gcm_aes128_decrypt_message@NETTLE_8 3.9~
+ nettle_siv_gcm_aes128_encrypt_message@NETTLE_8 3.9~
+ nettle_siv_gcm_aes256_decrypt_message@NETTLE_8 3.9~
+ nettle_siv_gcm_aes256_encrypt_message@NETTLE_8 3.9~
+ nettle_siv_gcm_decrypt_message@NETTLE_8 3.9~
+ nettle_siv_gcm_encrypt_message@NETTLE_8 3.9~
+ nettle_sm3@NETTLE_8 3.8~
+ nettle_sm3_digest@NETTLE_8 3.8~
+ nettle_sm3_init@NETTLE_8 3.8~
+ nettle_sm3_update@NETTLE_8 3.8~
+ nettle_sm4@NETTLE_8 3.9~
+ nettle_sm4_crypt@NETTLE_8 3.9~
+ nettle_sm4_set_decrypt_key@NETTLE_8 3.9~
+ nettle_sm4_set_encrypt_key@NETTLE_8 3.9~
  nettle_streebog256@NETTLE_8 3.7~
  nettle_streebog256_digest@NETTLE_8 3.7~
  nettle_streebog256_init@NETTLE_8 3.7~
