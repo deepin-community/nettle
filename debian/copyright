@@ -15,129 +15,141 @@ Comment:
  find the current status of particular files, you have to read the
  copyright notices at the top of the files.
  .
- A list of the supported algorithms, their origins, and exceptions to
- the above licensing:
+ 8X--------- AUTHORS file -----------------------------------------
+ Authors of GNU Nettle
  .
- AES
-     The implementation of the AES cipher (also known as rijndael) is
-     written by Rafael Sevilla.  Assembler for x86 by Rafael Sevilla and
-     Niels Möller, Sparc assembler by Niels Möller.
+ The oldest code in Nettle was copied into precursors of the Nettle
+ library from other public domain or LGPLv2 sources.
  .
- ARCFOUR
-     The implementation of the ARCFOUR (also known as RC4) cipher is
-     written by Niels Möller.
+ Steve Reid		Original CAST128 implementation
+ Dana L. How		Original DES implementation,
+ Colin Plumb		Original MD5 implementation
+ Peter Gutmann		Original SHA1 implementation
+ Andrew Kuchling		Original MD2 implementation
  .
- ARCTWO
-     The implementation of the ARCTWO (also known as RC2) cipher is
-     written by Nikos Mavroyanopoulos and modified by Werner Koch and
-     Simon Josefsson.
+ Free Software Foundation
+ 			Holds copyrights on code ported from
+ 			libgcrypt, written by Werner Koch and others.
  .
- BLOWFISH
-     The implementation of the BLOWFISH cipher is written by Werner
-     Koch, copyright owned by the Free Software Foundation.  Also hacked
-     by Simon Josefsson and Niels Möller.
+ J.H.M. Dassen		Original port of blowfish to GNU lsh, later
+ 			split off into Nettle. (This blowfish
+ 			implementation was replaced later).
+ 			Twofish tests.
  .
- CAMELLIA
-     The C implementation is by Nippon Telegraph and Telephone
-     Corporation (NTT), heavily modified by Niels Möller.  Assembler for
-     x86 and x86_64 by Niels Möller.
+ Ruud de Rooij		Twofish implementation for GNU lsh, later split off into Nettle.
  .
- CAST128
-     The implementation of the CAST128 cipher is written by Steve Reid.
-     Released into the public domain.
+ Rafael Sevilla		AES C and x86 implementation, original port of
+ 			Serpent, for GNU lsh, later split off into Nettle.
  .
- CHACHA
-     Implemented by Joachim Strömbergson, based on the implementation of
-     SALSA20 (see below).  Assembly for x86_64 by Niels Möller.
+ Authors of Nettle (in roughly chronological order of initial contribution)
  .
- DES
-     The implementation of the DES cipher is written by Dana L. How, and
-     released under the LGPL, version 2 or later.
+ Niels Möller		Main author.
  .
- GOSTHASH94
-     The C implementation of the GOST94 message digest is written by
-     Aleksey Kravchenko and was ported from the rhash library by Nikos
-     Mavrogiannopoulos.  It is released under the MIT license.
+ Dan Egnor		Base64 conversion.
  .
- MD2
-     The implementation of MD2 is written by Andrew Kuchling, and hacked
-     some by Andreas Sigfridsson and Niels Möller.  Python Cryptography
-     Toolkit license (essentially public domain).
+ Andreas Sigfridsson	Port of MD2, from Andrew Kuchling's python
+ 			cryptography toolkit.
  .
- MD4
-     This is almost the same code as for MD5 below, with modifications
-     by Marcus Comstedt.  Released into the public domain.
+ Marcus Comstedt		Implemented MD4.
  .
- MD5
-     The implementation of the MD5 message digest is written by Colin
-     Plumb.  It has been hacked some more by Andrew Kuchling and Niels
-     Möller.  Released into the public domain.
+ D. J. Bernstein		Salsa20 public domain reference implementation.
  .
- PBKDF2
-     The C implementation of PBKDF2 is based on earlier work for Shishi
-     and GnuTLS by Simon Josefsson.
+ Simon Josefsson		Port of Arctwo, from GnuTLS and libgcrypt. New
+ 			ports of LGPL Serpent and Blowfish code, from
+ 			libgcrypt. Port of Salsa20, based on djb's
+ 			reference. Implementation of PBKDF2 (RFC
+ 			2898).
  .
- RIPEMD160
-     The implementation of RIPEMD160 message digest is based on the code
-     in libgcrypt, copyright owned by the Free Software Foundation.
-     Ported to Nettle by Andres Mejia.
+ Henrik Grubbström	AES assembly for Sparc64.
  .
- SALSA20
-     The C implementation of SALSA20 is based on D. J. Bernstein’s
-     reference implementation (in the public domain), adapted to Nettle
-     by Simon Josefsson, and heavily modified by Niels Möller.  Assembly
-     for x86_64 and ARM by Niels Möller.
+ Magnus Holmgren		Conversion of DSA keys from DER format to SEXP
+ 			format.
  .
- SERPENT
-     The implementation of the SERPENT cipher is based on the code in
-     libgcrypt, copyright owned by the Free Software Foundation.
-     Adapted to Nettle by Simon Josefsson and heavily modified by Niels
-     Möller.  Assembly for x86_64 by Niels Möller.
+ Daniel Kahn Gillmor	Added the lists for nettle_get_ciphers,
+ 			nettle_get_hashes and nettle_get_armors. Test
+ 			vectors for hashes and hmac.
  .
- POLY1305
-     Based on the implementation by Andrew M. (floodyberry), modified by
-     Nikos Mavrogiannopoulos and Niels Möller.  Assembly for x86_64 by
-     Niels Möller.
+ Nippon Telegraph and Telephone Corporation
+ 			LGPL:ed reference implementation of the
+ 			Camellia cipher.
  .
- SHA1
-     The C implementation of the SHA1 message digest is written by Peter
-     Gutmann, and hacked some more by Andrew Kuchling and Niels Möller.
-     Released into the public domain.  Assembler for x86, x86_64 and ARM
-     by Niels Möller, released under the LGPL.
+ Andrew M. (floodyberry)
+ 			The poly1305 code nettle's C implementation is
+ 			derived from.
  .
- SHA2
-     Written by Niels Möller, using Peter Gutmann’s SHA1 code as a
-     model.
+ Aleksey Kravchenko	The gosthash94 implementation in rhash library.
  .
- SHA3
-     Written by Niels Möller.
+ Stefan Metzmacher, Jeremy Allison, Michael Adam
+ 			Contributed to the CMAC code, which was added
+ 			to Nettle by Nikos Mavroyanopoulos.
  .
- TWOFISH
-     The implementation of the TWOFISH cipher is written by Ruud de
-     Rooij.
+ Nikos Mavroyanopoulos	GCM implementation, RSA blinding code,
+ 			interface for general rsa-pkcs1 signatures.
+ 			Port of gosthash94 implementation from rhash. Port of
+ 			poly1305. Salsa20r12 variant. HKDF (RFC 5869)
+ 			implementation. CMAC and SIV-CMAV
+ 			implementation. CTR and GCM optimizations.
+ 			Implementation of versioned symbols. Setup of
+ 			.gitlab-ci.yml. Large number of smaller fixes.
  .
- UMAC
-     Written by Niels Möller.
+ Andres Mejia		Ported Ripemd160 from libgcrypt.
  .
- CMAC
-     Written by Nikos Mavrogiannopoulos, Niels Möller, Jeremy Allison,
-     Michael Adam and Stefan Metzmacher.
+ Martin Storsjö		Implemented m4 macrology to make x86_64
+ 			assembly files work with the windows ABI.
+ 			Several other portability improvements.
  .
- RSA
-     Written by Niels Möller.  Uses the GMP library for bignum
-     operations.
+ Jeronimo Pellegrini	Documentation for base16 and base64 functions.
  .
- DSA
-     Written by Niels Möller.  Uses the GMP library for bignum
-     operations.
+ Tim Ruehsen		Several smaller cleanups and bugfixes.
  .
- ECDSA
-     Written by Niels Möller.  Uses the GMP library for bignum
-     operations.  Development of Nettle’s ECC support was funded by the
-     .SE Internet Fund.
+ Fredrik Thulin		Test vectors for pbkdf2-hmac-sha512.
+ .
+ Joachim Strömbergson	Chacha implementation. Support for sha512_224
+ 			and sha512_256.
+ .
+ Owen Kirby		Implementation of CCM mode.
+ .
+ Amos Jeffries		Implementation of base64url encoding.
+ .
+ Daiki Ueno		Implementation of RSA-PSS signatures,
+ 			curve448, shake256, ed448-shake256 signatures,
+ 			chacha functions for 32-bit nonce, struct
+ 			nettle_mac interface.
+ .
+ Dmitry Baryshkov	CFB and CFB8 modes, CMAC64. gosthash94cp and
+ 			Streebog hash functions, GOST DSA signatures
+ 			and curves GC256B and GC512A. Various bug
+ 			fixes and cleanups.
+ .
+ Simo Sorce		Side-channel silent RSA functions. XTS
+ 			implementation.
+ .
+ H.J. Lu			Assembly annotations for Intel "Control-flow
+ 			Enforcement Technology".
+ .
+ Stephen R. van den Berg
+ 			Port of bcrypt.
+ .
+ Mamone Tarsha Kurdi	Powerpc64 assembly and fat build setup,
+ 			including AES and GCM. Arm64 assembly and fat
+ 			build setup, including AES, Chacha, GCM, SHA1,
+ 			SHA256. S390x assembly and fat build setup,
+ 			including AES, Chacha, memxor, memxor3, SHA1,
+ 			SHA256, SHA512, SHA3.
+ .
+ Nicolas Mora		RFC 3394 keywrap.
+ .
+ Tianjia Zhang		SM3 hash function.
+ .
+ Amitay Isaacs		Powerpc64 assembly for secp192r1, secp224r1
+ 			and secp256r1.
+ .
+ Martin Schwenke		Powerpc64 assembly for secp384r1, secp521r1,
+ 			curve25519 and curve448.
+ 8X--------- end of AUTHORS file ------------------------------------
 
 Files: *
-Copyright: 2001-2020 Niels Möller
+Copyright: 2001-2022 Niels Möller
 License: LGPL-3+ or GPL-2+
 
 Files: aes-invert-internal.c aes-set-decrypt-key.c
@@ -170,6 +182,56 @@ Files: arctwo.h
  salsa20-internal.h salsa20.h
 Copyright: 2004, 2012 Simon Josefsson
  2001, 2002, 2004, 2014 Niels Möller
+License: LGPL-3+ or GPL-2+
+
+Files: arm64/chacha-2core.asm arm64/chacha-4core.asm
+ arm64/chacha-core-internal.asm s390x/vf/chacha-2core.asm
+ s390x/vf/chacha-4core.asm s390x/vf/chacha-core-internal.asm
+Copyright: 2020 Niels Möller and Torbjörn Granlund
+ 2022 Mamone Tarsha
+License: LGPL-3+ or GPL-2+
+
+Files: arm64/crypto/aes128-decrypt.asm arm64/crypto/aes128-encrypt.asm
+ arm64/crypto/aes192-decrypt.asm arm64/crypto/aes192-encrypt.asm
+ arm64/crypto/aes256-decrypt.asm arm64/crypto/aes256-encrypt.asm
+ arm64/crypto/sha1-compress.asm arm64/crypto/sha256-compress.asm
+ arm64/fat/aes128-decrypt-2.asm arm64/fat/aes128-encrypt-2.asm
+ arm64/fat/aes192-decrypt-2.asm arm64/fat/aes192-encrypt-2.asm
+ arm64/fat/aes256-decrypt-2.asm arm64/fat/aes256-encrypt-2.asm
+ arm64/fat/ghash-set-key-2.asm arm64/fat/ghash-update-2.asm
+ arm64/fat/sha1-compress-2.asm arm64/fat/sha256-compress-2.asm
+ fat-arm64.c fat-s390x.c powerpc64/fat/ghash-set-key-2.asm
+ powerpc64/fat/ghash-update-2.asm s390x/fat/aes128-decrypt-2.asm
+ s390x/fat/aes128-encrypt-2.asm s390x/fat/aes128-set-decrypt-key-2.asm
+ s390x/fat/aes128-set-encrypt-key-2.asm
+ s390x/fat/aes192-decrypt-2.asm s390x/fat/aes192-encrypt-2.asm
+ s390x/fat/aes192-set-decrypt-key-2.asm
+ s390x/fat/aes192-set-encrypt-key-2.asm s390x/fat/aes256-decrypt-2.asm
+ s390x/fat/aes256-encrypt-2.asm s390x/fat/aes256-set-decrypt-key-2.asm
+ s390x/fat/aes256-set-encrypt-key-2.asm s390x/fat/chacha-2core.asm
+ s390x/fat/chacha-4core.asm s390x/fat/chacha-core-internal-2.asm
+ s390x/fat/cpu-facility.asm s390x/fat/ghash-set-key-2.asm
+ s390x/fat/ghash-update-2.asm s390x/fat/memxor3-2.asm
+ s390x/fat/sha1-compress-2.asm s390x/fat/sha256-compress-2.asm
+ s390x/fat/sha3-permute-2.asm s390x/fat/sha512-compress-2.asm
+ s390x/memxor.asm s390x/msa/sha1-compress.asm
+ s390x/msa_x1/aes128-decrypt.asm s390x/msa_x1/aes128-encrypt.asm
+ s390x/msa_x1/aes128-set-decrypt-key.asm
+ s390x/msa_x1/aes128-set-encrypt-key.asm s390x/msa_x1/sha256-compress.asm
+ s390x/msa_x2/aes192-decrypt.asm s390x/msa_x2/aes192-encrypt.asm
+ s390x/msa_x2/aes192-set-decrypt-key.asm
+ s390x/msa_x2/aes192-set-encrypt-key.asm s390x/msa_x2/aes256-decrypt.asm
+ s390x/msa_x2/aes256-encrypt.asm s390x/msa_x2/aes256-set-decrypt-key.asm
+ s390x/msa_x2/aes256-set-encrypt-key.asm s390x/msa_x2/sha512-compress.asm
+ s390x/msa_x4/ghash-set-key.asm s390x/msa_x4/ghash-update.asm
+ s390x/vf/memxor3.asm
+Copyright: 2020, 2021 Mamone Tarsha
+License: LGPL-3+ or GPL-2+
+
+Files: arm64/crypto/ghash-set-key.asm arm64/crypto/ghash-update.asm
+ powerpc64/p8/ghash-set-key.asm powerpc64/p8/ghash-update.asm
+Copyright: 2020 Niels Möller and Mamone Tarsha
+ 2021 Michael Weiser
 License: LGPL-3+ or GPL-2+
 
 Files: base64.h base64-meta.c
@@ -271,7 +333,7 @@ Copyright: 2005, 2009, 2014 Niels Möller
  2009 Magnus Holmgren
 License: LGPL-3+ or GPL-2+
 
-Files: desCode.h descode.README desdata.c desinfo.c
+Files: desCode.h descore.README desdata.c
 Copyright: © 2002 Dana L. How
 License: LGPL-2+
  This program is free software; you can redistribute it and/or modify
@@ -308,6 +370,11 @@ Copyright: 2017 Red Hat, Inc.
  2013, 2014, 2017, 2019 Niels Möller
 License: LGPL-3+ or GPL-2+
 
+Files: ecc-secp192r1.c
+Copyright: 2013, 2014, 2019, 2021 Niels Möller
+ 2019 Wim Lewis
+License: LGPL-3+ or GPL-2+
+
 Files: examples/base16dec.c examples/base16enc.c
  examples/base64dec.c examples/base64enc.c
 Copyright: 2006, 2012, Jeronimo Pellegrini, Niels Möller
@@ -318,9 +385,9 @@ Copyright: 2015, 2017, 2018, Red Hat, Inc.
  2001, 2002, 2005-2018, Niels Möller
 License: LGPL-3+ or GPL-2+
 
-Files: gcm.c gcm.h
+Files: gcm.c gcm.h ghash-set-key.c ghash-update.c
 Copyright: 2011 Katholieke Universiteit Leuven
- 2011, 2013, 2018 Niels Möller
+ 2011, 2013, 2018, 2022 Niels Möller
  2018 Red Hat, Inc.
 License: LGPL-3+ or GPL-2+
 
@@ -357,6 +424,10 @@ Files: hmac-md5-meta.c hmac-ripemd160-meta.c
 Copyright: 2017, 2020 Daiki Ueno
 License: LGPL-3+ or GPL-2+
 
+Files: hmac-sm3.c hmac-sm3-meta.c
+Copyright: 2021 Tianjia Zhang
+License: LGPL-3+ or GPL-2+
+
 Files: md2.c
 Copyright: ? Andrew Kuchling
            2003 Andreas Sigfridsson
@@ -382,6 +453,11 @@ Files: nettle-meta-armors.c
  nettle-meta-ciphers.c
  nettle-meta-hashes.c
 Copyright: 2011 Daniel Kahn Gillmor
+License: LGPL-3+ or GPL-2+
+
+Files: nist-keywrap.c nist-keywrap.h
+Copyright: 2021 Nicolas Mora
+ 2021 Niels Möller
 License: LGPL-3+ or GPL-2+
 
 Files: pbkdf2-hmac-sha1.c
@@ -411,6 +487,23 @@ Files: poly1305-internal.h
  poly1305.h
 Copyright: 2013, Nikos Mavrogiannopoulos
  2013, 2014, Niels Möller
+License: LGPL-3+ or GPL-2+
+
+Files: powerpc64/ecc-curve25519-modp.asm powerpc64/ecc-curve448-modp.asm
+ powerpc64/ecc-secp521r1-modp.asm
+Copyright: 2021 Martin Schwenke & Alastair D´Silva, IBM Corporation
+License: LGPL-3+ or GPL-2+
+
+Files: powerpc64/ecc-secp192r1-modp.asm powerpc64/ecc-secp224r1-modp.asm
+Copyright: 2021 Amitay Isaacs, IBM Corporation
+License: LGPL-3+ or GPL-2+
+
+Files: powerpc64/ecc-secp256r1-redc.asm
+Copyright: 2021 Amitay Isaacs & Martin Schwenke, IBM Corporation
+License: LGPL-3+ or GPL-2+
+
+Files: powerpc64/ecc-secp384r1-modp.asm
+Copyright: 2021 Martin Schwenke, Amitay Isaacs & Alastair D´Silva, IBM Corporation
 License: LGPL-3+ or GPL-2+
 
 Files: ripemd160.c ripemd160-compress.c
@@ -447,6 +540,11 @@ Copyright: 2018, Red Hat Inc.
  2001, 2015, Niels Möller
 License: LGPL-3+ or GPL-2+
 
+Files: s390x/vf/sha3-permute.asm
+Copyright: 2012 Niels Möller
+ 2021 Mamone Tarsha
+License: LGPL-3+ or GPL-2+
+
 Files: serpent-encrypt.c serpent-decrypt.c serpent-set-key.c serpent-internal.h
 Copyright: 1998 Ross Anderson, Eli Biham, Lars Knudsen
  2003, 2004, 2005 Free Software Foundation, Inc.
@@ -461,6 +559,11 @@ License: LGPL-3+ or GPL-2+
 Files: sha512.c
 Copyright: 2013, 2014 Joachim Strömbergson
  2001, 2010, 2012, 2014 Niels Möller
+License: LGPL-3+ or GPL-2+
+
+Files: sm3.c sm3.h sm3-meta.c
+Copyright: 2017 Jia Zhang
+ 2021 Tianjia Zhang
 License: LGPL-3+ or GPL-2+
 
 Files: testsuite/arctwo-test.c
