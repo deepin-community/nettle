@@ -1,4 +1,4 @@
-libnettle.so.8 libnettle8t64 #MINVER#
+libnettle.so.8 libnettle8 #MINVER#
 * Build-Depends-Package: nettle-dev
  NETTLE_8@NETTLE_8 0
  NETTLE_INTERNAL_8_11@NETTLE_INTERNAL_8_11 3.10.2~

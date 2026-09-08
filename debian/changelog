@@ -1,3 +1,10 @@
+nettle (3.10.2-1deepin1) unstable; urgency=medium
+
+  * Revert 64-bit time_t transition (restore libnettle8 and libhogweed6 package names).
+  * Fix dh_installdocs --link-doc reference in debian/rules (libnettle8t64 -> libnettle8).
+
+ -- lichenggang <lichenggang@uniontech.com>  Tue, 08 Sep 2026 13:38:27 +0800
+
 nettle (3.10.2-1) unstable; urgency=low
 
   * New upstream maintenance release 3.10.2 (Closes: #1100681, #1107059).

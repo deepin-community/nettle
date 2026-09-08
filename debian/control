@@ -10,10 +10,7 @@ Vcs-Browser: https://salsa.debian.org/holmgren/nettle
 Homepage: https://www.lysator.liu.se/~nisse/nettle/
 Rules-Requires-Root: no
 
-Package: libnettle8t64
-Provides: ${t64:Provides}
-Replaces: libnettle8
-Breaks: libnettle8 (<< ${source:Version})
+Package: libnettle8
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
@@ -35,10 +32,7 @@ Description: low level cryptographic library (symmetric and one-way cryptos)
  algorithms. To avoid having this package depend on libgmp, the
  asymmetric cryptos reside in a separate library, libhogweed.
 
-Package: libhogweed6t64
-Provides: ${t64:Provides}
-Replaces: libhogweed6
-Breaks: libhogweed6 (<< ${source:Version})
+Package: libhogweed6
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
@@ -64,7 +58,7 @@ Package: nettle-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libnettle8t64 (= ${binary:Version}), libhogweed6t64 (= ${binary:Version}),
+Depends: libnettle8 (= ${binary:Version}), libhogweed6 (= ${binary:Version}),
          libgmp-dev, ${misc:Depends}
 Replaces: libnettle-dev
 Conflicts: libnettle-dev
