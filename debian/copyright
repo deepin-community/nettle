@@ -2,7 +2,7 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Nettle
 Upstream-Contact: Niels Möller <nisse@lysator.liu.se>
 Source: http://www.lysator.liu.se/~nisse/nettle/
-Copyright: © 2001-2020 Niels Möller
+Copyright: © 2001-2024 Niels Möller
  Some parts are Copyright © the Free Software Foundation and various
  people. See below and source code comments for details.
 License: LGPL-3+ or GPL-2+
@@ -25,7 +25,7 @@ Comment:
  Dana L. How		Original DES implementation,
  Colin Plumb		Original MD5 implementation
  Peter Gutmann		Original SHA1 implementation
- Andrew Kuchling		Original MD2 implementation
+ Andrew Kuchling	Original MD2 implementation
  .
  Free Software Foundation
  			Holds copyrights on code ported from
@@ -50,19 +50,19 @@ Comment:
  Andreas Sigfridsson	Port of MD2, from Andrew Kuchling's python
  			cryptography toolkit.
  .
- Marcus Comstedt		Implemented MD4.
+ Marcus Comstedt	Implemented MD4.
  .
- D. J. Bernstein		Salsa20 public domain reference implementation.
+ D. J. Bernstein	Salsa20 public domain reference implementation.
  .
- Simon Josefsson		Port of Arctwo, from GnuTLS and libgcrypt. New
+ Simon Josefsson	Port of Arctwo, from GnuTLS and libgcrypt. New
  			ports of LGPL Serpent and Blowfish code, from
  			libgcrypt. Port of Salsa20, based on djb's
  			reference. Implementation of PBKDF2 (RFC
- 			2898).
+ 			2898) and drbg-ctr.
  .
  Henrik Grubbström	AES assembly for Sparc64.
  .
- Magnus Holmgren		Conversion of DSA keys from DER format to SEXP
+ Magnus Holmgren	Conversion of DSA keys from DER format to SEXP
  			format.
  .
  Daniel Kahn Gillmor	Added the lists for nettle_get_ciphers,
@@ -112,9 +112,9 @@ Comment:
  Amos Jeffries		Implementation of base64url encoding.
  .
  Daiki Ueno		Implementation of RSA-PSS signatures,
- 			curve448, shake256, ed448-shake256 signatures,
+ 			curve448, SHA3 shake, ed448-shake256 signatures,
  			chacha functions for 32-bit nonce, struct
- 			nettle_mac interface.
+ 			nettle_mac interface, siv-gcm, RSA-OAEP.
  .
  Dmitry Baryshkov	CFB and CFB8 modes, CMAC64. gosthash94cp and
  			Streebog hash functions, GOST DSA signatures
@@ -124,32 +124,39 @@ Comment:
  Simo Sorce		Side-channel silent RSA functions. XTS
  			implementation.
  .
- H.J. Lu			Assembly annotations for Intel "Control-flow
+ H.J. Lu		Assembly annotations for Intel "Control-flow
  			Enforcement Technology".
  .
  Stephen R. van den Berg
  			Port of bcrypt.
  .
  Mamone Tarsha Kurdi	Powerpc64 assembly and fat build setup,
- 			including AES and GCM. Arm64 assembly and fat
+ 			including AES, GCM and poly1305. Arm64 assembly and fat
  			build setup, including AES, Chacha, GCM, SHA1,
  			SHA256. S390x assembly and fat build setup,
  			including AES, Chacha, memxor, memxor3, SHA1,
  			SHA256, SHA512, SHA3.
  .
- Nicolas Mora		RFC 3394 keywrap.
+ Nicolas Mora		RFC 3394 keywrap, RSA-OAEP.
  .
- Tianjia Zhang		SM3 hash function.
+ Tianjia Zhang		SM3 hash function, SM4 block cipher.
  .
  Amitay Isaacs		Powerpc64 assembly for secp192r1, secp224r1
  			and secp256r1.
  .
- Martin Schwenke		Powerpc64 assembly for secp384r1, secp521r1,
+ Martin Schwenke	Powerpc64 assembly for secp384r1, secp521r1,
  			curve25519 and curve448.
+ .
+ Zoltan Fridrich	Balloon password hashing.
+ .
+ Danny Tsen		Powerpc64 assembly for combined GCM-AES.
+ .
+ Eric Richter		Powerpc64 sha256 assembly.
+ .
  8X--------- end of AUTHORS file ------------------------------------
 
 Files: *
-Copyright: 2001-2022 Niels Möller
+Copyright: 2001-2023 Niels Möller
 License: LGPL-3+ or GPL-2+
 
 Files: aes-invert-internal.c aes-set-decrypt-key.c
@@ -194,12 +201,12 @@ License: LGPL-3+ or GPL-2+
 Files: arm64/crypto/aes128-decrypt.asm arm64/crypto/aes128-encrypt.asm
  arm64/crypto/aes192-decrypt.asm arm64/crypto/aes192-encrypt.asm
  arm64/crypto/aes256-decrypt.asm arm64/crypto/aes256-encrypt.asm
- arm64/crypto/sha1-compress.asm arm64/crypto/sha256-compress.asm
+ arm64/crypto/sha1-compress.asm arm64/crypto/sha256-compress-n.asm
  arm64/fat/aes128-decrypt-2.asm arm64/fat/aes128-encrypt-2.asm
  arm64/fat/aes192-decrypt-2.asm arm64/fat/aes192-encrypt-2.asm
  arm64/fat/aes256-decrypt-2.asm arm64/fat/aes256-encrypt-2.asm
  arm64/fat/ghash-set-key-2.asm arm64/fat/ghash-update-2.asm
- arm64/fat/sha1-compress-2.asm arm64/fat/sha256-compress-2.asm
+ arm64/fat/sha1-compress-2.asm arm64/fat/sha256-compress-n-2.asm
  fat-arm64.c fat-s390x.c powerpc64/fat/ghash-set-key-2.asm
  powerpc64/fat/ghash-update-2.asm s390x/fat/aes128-decrypt-2.asm
  s390x/fat/aes128-encrypt-2.asm s390x/fat/aes128-set-decrypt-key-2.asm
@@ -212,12 +219,12 @@ Files: arm64/crypto/aes128-decrypt.asm arm64/crypto/aes128-encrypt.asm
  s390x/fat/chacha-4core.asm s390x/fat/chacha-core-internal-2.asm
  s390x/fat/cpu-facility.asm s390x/fat/ghash-set-key-2.asm
  s390x/fat/ghash-update-2.asm s390x/fat/memxor3-2.asm
- s390x/fat/sha1-compress-2.asm s390x/fat/sha256-compress-2.asm
+ s390x/fat/sha1-compress-2.asm s390x/fat/sha256-compress-n-2.asm
  s390x/fat/sha3-permute-2.asm s390x/fat/sha512-compress-2.asm
  s390x/memxor.asm s390x/msa/sha1-compress.asm
  s390x/msa_x1/aes128-decrypt.asm s390x/msa_x1/aes128-encrypt.asm
  s390x/msa_x1/aes128-set-decrypt-key.asm
- s390x/msa_x1/aes128-set-encrypt-key.asm s390x/msa_x1/sha256-compress.asm
+ s390x/msa_x1/aes128-set-encrypt-key.asm s390x/msa_x1/sha256-compress-n.asm
  s390x/msa_x2/aes192-decrypt.asm s390x/msa_x2/aes192-encrypt.asm
  s390x/msa_x2/aes192-set-decrypt-key.asm
  s390x/msa_x2/aes192-set-encrypt-key.asm s390x/msa_x2/aes256-decrypt.asm
@@ -236,6 +243,10 @@ License: LGPL-3+ or GPL-2+
 
 Files: base64.h base64-meta.c
 Copyright: 2002 Dan Egnor, Niels Möller
+License: LGPL-3+ or GPL-2+
+
+Files: balloon*.*
+Copyright: 2022, Zoltan Fridrich, Red Hat, Inc.
 License: LGPL-3+ or GPL-2+
 
 Files: base64url-decode.c base64url-encode.c
@@ -385,7 +396,7 @@ Copyright: 2015, 2017, 2018, Red Hat, Inc.
  2001, 2002, 2005-2018, Niels Möller
 License: LGPL-3+ or GPL-2+
 
-Files: gcm.c gcm.h ghash-set-key.c ghash-update.c
+Files: gcm.c gcm.h ghash-set-key.c ghash-update.c siv-ghash-set-key.c siv-ghash-update.c
 Copyright: 2011 Katholieke Universiteit Leuven
  2011, 2013, 2018, 2022 Niels Möller
  2018 Red Hat, Inc.
@@ -439,7 +450,7 @@ Copyright: 2003 Marcus Comstedt
  2003 Niels Möller
 License: LGPL-3+ or GPL-2+
 
-Files: md5.c md5-compress.c
+Files: md5.c
 Copyright: Colin Plumb, Andrew Kuchling
            2001 Niels Möller
 License: LGPL-3+ or GPL-2+
@@ -588,29 +599,13 @@ Copyright: 2017, Red Hat, Inc.
  2017, Daiki Ueno
 License: LGPL-3+ or GPL-2+
 
-Files: testsuite/siv-test.c
+Files: testsuite/siv-cmac-test.c
 Copyright: 2012, 2013, 2017, 2018 Nikos Mavrogiannopoulos
 License: LGPL-3+ or GPL-2+
 
-Files: texinfo.tex
-Copyright: 1985, 1986, 1988, 1990-2009, Free Software Foundation, Inc.
-License: GPL-3+
- This texinfo.tex file is free software: you can redistribute it and/or
- modify it under the terms of the GNU General Public License as
- published by the Free Software Foundation, either version 3 of the
- License, or (at your option) any later version.
- .
- This texinfo.tex file is distributed in the hope that it will be
- useful, but WITHOUT ANY WARRANTY; without even the implied warranty
- of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
- .
- As a special exception, when this file is read by TeX when processing
- a Texinfo source document, you may use the result without
- restriction.  (This has been our intent since Texinfo was invented.)
+Files: testsuite/siv-gcm-test.c
+Copyright: 2022, Red Hat, Inc.
+License: LGPL-3+ or GPL-2+
 
 Files: twofish*
 Copyright: 1999 Ruud de Rooij <ruud@debian.org>
