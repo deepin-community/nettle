@@ -1,4 +1,4 @@
-libhogweed.so.6 libhogweed6t64 #MINVER#
+libhogweed.so.6 libhogweed6 #MINVER#
 * Build-Depends-Package: nettle-dev
  HOGWEED_6@HOGWEED_6 0
  HOGWEED_INTERNAL_6_11@HOGWEED_INTERNAL_6_11 3.10.2~
