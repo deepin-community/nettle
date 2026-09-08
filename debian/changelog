@@ -1,3 +1,53 @@
+nettle (3.10.2-1) unstable; urgency=low
+
+  * New upstream maintenance release 3.10.2 (Closes: #1100681, #1107059).
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sat, 20 Sep 2025 15:14:28 +0200
+
+nettle (3.10.1-1) unstable; urgency=low
+
+  * New upstream maintenance release 3.10.1.
+  * Change homepage field to use https.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sun, 16 Feb 2025 13:57:11 +0100
+
+nettle (3.10-1) unstable; urgency=low
+
+  * New upstream version 3.10
+  * Add Lintian override for source-is-missing [nettle.html].
+  * Update debian/copyright.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sat, 22 Jun 2024 21:39:29 +0200
+
+nettle (3.9.1-2.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix documentation link target to fix nettle-bin uninstallability.
+
+ -- Steve Langasek <vorlon@debian.org>  Mon, 04 Mar 2024 01:24:40 +0000
+
+nettle (3.9.1-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1063170
+
+ -- Benjamin Drung <bdrung@debian.org>  Wed, 28 Feb 2024 22:51:33 +0000
+
+nettle (3.9.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Thu, 27 Jul 2023 16:31:36 +0200
+
+nettle (3.9.1-1) experimental; urgency=low
+
+  * New upstream release (Closes: #1022049).
+  * Update debian/copyright.
+  * Update upstream PGP key.
+  * Bump Standards-Version to 4.6.2.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sun, 25 Jun 2023 23:02:43 +0200
+
 nettle (3.8.1-2) unstable; urgency=low
 
   * Upload to unstable (Closes: #1015346).
