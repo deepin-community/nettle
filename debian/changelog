@@ -1,3 +1,9 @@
+nettle (3.10.2-1deepin2) unstable; urgency=medium
+
+  * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
+
+ -- tunaichao <tunaichao@uniontech.com>  Thu, 10 Sep 2026 19:37:45 +0800
+
 nettle (3.10.2-1deepin1) unstable; urgency=medium
 
   * Revert 64-bit time_t transition (restore libnettle8 and libhogweed6 package names).
